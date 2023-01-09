@@ -1,0 +1,18 @@
+.dropdownItem{
+    display: flex;
+    margin: 10px auto;
+    align-items: center;
+}
+.dropdownItem img{
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: var(--speed);
+    color: aliceblue;
+}
+.dropdownItem a{
+    max-width: 100px;
+    margin-left: 10px;
+    transition: var(--speed);
+}
