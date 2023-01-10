@@ -1,6 +1,6 @@
 .dropdown-menu{
     position: absolute;
-    top: 90px;
+    top: 94px;
     right: 0;
     background-color: var(--primary-bg);
     border-radius: var(--border-radius);
@@ -13,7 +13,7 @@
     content: '';
     position: absolute;
     top: -10px;
-    right: 50%;
+    right: 42%;
     width: 20px;
     height: 20px;
     background: var(--primary-bg);
