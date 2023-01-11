@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <div className='px-4'>
+    <div className=''>
       <RouterProvider router={router}></RouterProvider>
       <ScrollToTop
         width="28"

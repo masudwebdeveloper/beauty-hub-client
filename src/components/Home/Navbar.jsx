@@ -11,6 +11,7 @@ import register from "../../assets/images/register.png";
 import order from "../../assets/images/order.png";
 import { GoEyeClosed } from "react-icons/go";
 import { CiSearch } from "react-icons/ci";
+import {RxHamburgerMenu} from "react-icons/rx";
 
 import {
   MagnifyingGlassIcon,
@@ -21,12 +22,15 @@ import DropdownItem from "../share/DropdownItem";
 import "./Navbar.modules.css";
 import SkinCareDropdrownItem from "./SkinCareDropdrownItem";
 import TreatmentDropdownItem from "./TreatmentDropdownItem";
+import Drawer from "./Drawer";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [session, setSession] = useState(false);
   const [opsion, setOpsion] = useState(false);
   const [openField, setOpenField] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <section className="max-w-[1350px] mx-auto">
       <div className="hidden md:block">
@@ -112,7 +116,10 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <header className="sticky top-0 z-30 flex w-full items-center justify-center bg-[#00131E] mt-2">
+      <header className="sticky top-0 z-30 flex w-full items-center justify-between bg-[#00131E] mt-2">
+        <div onClick={()=> setIsOpen(!isOpen)}>
+          <RxHamburgerMenu className="text-white text-3xl block md:hidden"></RxHamburgerMenu>
+        </div>
         <div className="flex items-center justify-center md:w-1/5">
           <Link href="/">
             <div className="relative cursor-pointer w-40 h-full text-left opacity-100 transition hover:opacity-100">
@@ -120,7 +127,7 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className={`dropdown-menu ${opsion ? "active" : "inactive"}`}>
+        <div className={`dropdown-menu top-0 right-0 ${opsion ? "active" : "inactive"}`}>
           <h3 className="dropdown-title">
             Masud Rana <br />
             <span>Web Develper</span>
@@ -138,10 +145,6 @@ const Navbar = () => {
             <div
               className={`absolute invisible group-hover:visible ease-in-out before:group-hover:visible opacity-0 group-hover:opacity-100 origin-bottom before:-z-30 duration-500  left-0 transition group-hover:-translate-y-0 translate-y-5 top-[80px] bg-gray-50 rounded-md w-3/5  before:w-5 before:h-5 before:bg-gray-50 shadow-2xl before:rotate-45 before:absolute before:-top-[10px] before:right-[49%] h-64`}
             >
-              {/* <h3 className="dropdown-title">
-                Masud Rana <br />
-                <span>Web Develper</span>
-              </h3> */}
               <div>
                 <SkinCareDropdrownItem></SkinCareDropdrownItem>
               </div>
@@ -152,10 +155,6 @@ const Navbar = () => {
             <div
               className={`absolute invisible group-hover:visible ease-in-out before:group-hover:visible opacity-0 group-hover:opacity-100 origin-bottom before:-z-30 duration-500  left-[115px] transition group-hover:-translate-y-0 translate-y-5 top-[80px] bg-gray-50 rounded-md w-3/5  before:w-5 before:h-5 before:bg-gray-50 shadow-2xl before:rotate-45 before:absolute before:-top-[10px] before:right-[49%] h-64`}
             >
-              {/* <h3 className="dropdown-title">
-                Masud Rana <br />
-                <span>Web Develper</span>
-              </h3> */}
               <div>
                 <TreatmentDropdownItem></TreatmentDropdownItem>
               </div>
@@ -198,7 +197,7 @@ const Navbar = () => {
           className={`absolute overflow-hidden ${
             openField
               ? "opacity-100 visible translate-x-0"
-              : "opacity-0 invisible -translate-x-96"
+              : "opacity-0 invisible -translate-x-96 delay-500 transition-opacity"
           } origin-left transition duration-1000`}
         >
           <div
@@ -213,7 +212,7 @@ const Navbar = () => {
               type="text"
               name="search"
               id="search"
-              className="w-[1350px] py-4 pr-5 pl-20"
+              className="w-full lg:w-[1350px] py-4 pr-5 pl-20"
             />
             <button
               type="submit"
@@ -224,6 +223,13 @@ const Navbar = () => {
           </form>
         </div>
       </header>
+      <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+        <MobileMenu />
+        <MobileMenu />
+        <MobileMenu />
+        <MobileMenu />
+        <MobileMenu />
+      </Drawer>
     </section>
   );
 };
