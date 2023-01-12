@@ -104,12 +104,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="border-r-2 px-3">
-              <Link>
+              <Link to='/login'>
                 <small>Login</small>
               </Link>
             </li>
             <li className="px-3">
-              <Link>
+              <Link to='/register'>
                 <small>Registation</small>
               </Link>
             </li>
@@ -143,7 +143,7 @@ const Navbar = () => {
           <Link className="group py-7 px-4 cursor-pointer transition opacity-75 hover:opacity-100 uppercase">
             Skin Care
             <div
-              className={`absolute invisible group-hover:visible ease-in-out before:group-hover:visible opacity-0 group-hover:opacity-100 origin-bottom before:-z-30 duration-500  left-0 transition group-hover:-translate-y-0 translate-y-5 top-[80px] bg-gray-50 rounded-md w-3/5  before:w-5 before:h-5 before:bg-gray-50 shadow-2xl before:rotate-45 before:absolute before:-top-[10px] before:right-[49%] h-64`}
+              className={`absolute invisible group-hover:visible ease-in-out before:group-hover:visible opacity-0 group-hover:opacity-100 origin-bottom before:-z-30 duration-500 left-0 transition group-hover:-translate-y-0 translate-y-5 top-[80px] bg-gray-50 rounded-md w-3/5  before:w-5 before:h-5 before:bg-gray-50 shadow-2xl before:rotate-45 before:absolute before:-top-[10px] before:right-[49%] h-64`}
             >
               <div>
                 <SkinCareDropdrownItem></SkinCareDropdrownItem>

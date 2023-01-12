@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <div className=''>
+    <div className='bg-[#F2F3F8] min-h-screen'>
       <RouterProvider router={router}></RouterProvider>
       <ScrollToTop
         width="28"
