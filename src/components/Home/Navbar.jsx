@@ -30,7 +30,7 @@ const Navbar = () => {
   const [session, setSession] = useState(false);
   const [opsion, setOpsion] = useState(false);
   const [openField, setOpenField] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section className="max-w-[1350px] mx-auto">
       <div className="hidden md:block">
@@ -116,7 +116,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <header className="sticky top-0 z-30 flex w-full items-center justify-between bg-[#00131E] mt-2">
+      <header className="sticky top-0 z-30 flex w-full items-center justify-between bg-[#00131E] mt-2 px-3 md:px-0">
         <div onClick={()=> setIsOpen(!isOpen)}>
           <RxHamburgerMenu className="text-white text-3xl block md:hidden"></RxHamburgerMenu>
         </div>
@@ -173,7 +173,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center gap-x-4 md:w-1/5 text-slate-50">
           <MagnifyingGlassIcon
             onClick={() => setOpenField(!openField)}
-            className="w-6 h-6 cursor-pointer opacity-75 transition hover:opacity-100"
+            className="hidden md:block w-6 h-6 cursor-pointer opacity-75 transition hover:opacity-100"
           ></MagnifyingGlassIcon>
           <Link href="/checkout">
             <div className="relative cursor-pointer">
@@ -187,7 +187,7 @@ const Navbar = () => {
             <img src="" alt="" />
           ) : (
             <UserIcon
-              className="w-6 h-6 cursor-pointer opacity-75 transition hover:opacity-100"
+              className="hidden md:block w-6 h-6 cursor-pointer opacity-75 transition hover:opacity-100"
               // onClick={()=> signIn()}
               onClick={() => setOpsion(!opsion)}
             ></UserIcon>
