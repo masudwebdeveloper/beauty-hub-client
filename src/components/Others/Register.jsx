@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SocialIcon from "../share/SocialIcon";
+import './Register.modules.css'
 
 const Register = () => {
     const [check, setCheck] = useState(true)
@@ -9,7 +10,7 @@ const Register = () => {
     }
   return (
     <div className="">
-      <div className="max-w-[1350px] mx-auto pt-5">
+      <div className="max-w-[1350px] mx-auto py-5">
         <div className="md:w-1/4 rounded-sm mx-auto text-center bg-white shadow-2xl py-5">
           <h2 className="text-gray-700 font-bold text-xl">Create an Account</h2>
           <form action="">
@@ -21,9 +22,9 @@ const Register = () => {
               required
             />
             <input
-              type="text"
+              type="number"
               name="number"
-              className="input text-xs border w-4/5 py-2 px-4 rounded mt-3"
+              className="input text-xs border w-4/5 py-2 px-4 rounded mt-3 m-0 -webkit-appearance-none"
               placeholder="Phone"
               required
             />

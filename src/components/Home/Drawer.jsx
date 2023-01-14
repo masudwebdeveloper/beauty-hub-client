@@ -18,7 +18,10 @@ export default function Drawer({ children, isOpen, setIsOpen }) {
         }
       >
         {" "}
-        <div onClick={()=> setIsOpen(!isOpen)} className="w-10 mt-2 ml-2 h-10 bg-gray-400 flex items-center justify-center rounded-full animate-pulse">
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-10 mt-2 ml-2 h-10 bg-gray-400 flex items-center justify-center rounded-full animate-pulse"
+        >
           <AiOutlineLogin className="text-2xl text-white"></AiOutlineLogin>
         </div>
         <article className="relative w-screen max-w-lg pb-10 flex flex-col space-y-6 overflow-y-scroll h-full">
