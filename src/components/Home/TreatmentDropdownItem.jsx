@@ -21,7 +21,7 @@ const TreatmentDropdownItem = () => {
             <p className="text-sm">Shop All Skin Care Products</p>
             <Link
               href="#_"
-              class="inline-block px-3 py-2 text-lg font-medium text-center text-white transition duration-300 rounded-md hover:from-purple-600 hover:to-pink-600 ease bg-gradient-to-br from-purple-500 to-pink-500 w-auto mt-2"
+              className="inline-block px-3 py-2 text-lg font-medium text-center text-white transition duration-300 rounded-md hover:from-purple-600 hover:to-pink-600 ease bg-gradient-to-br from-purple-500 to-pink-500 w-auto mt-2"
             >
               view all
             </Link>

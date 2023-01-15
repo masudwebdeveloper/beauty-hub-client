@@ -1,31 +1,29 @@
 import React from "react";
 import bannerOne from "../../../assets/images/banner-photo-one.jpg";
 import bannerTwo from "../../../assets/images/banner-photo-two.jpg";
-import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
+import { Autoplay, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Banner = () => {
   return (
     <main>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, Autoplay]}
+        modules={[Pagination, Scrollbar, Autoplay]}
         slidesPerView={1}
         loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
-        navigation={true}
         pagination={{
           dynamicBullets: true,
         }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log()}
+        onSlideChange={() => console.log()}
       >
         <SwiperSlide>
           <section

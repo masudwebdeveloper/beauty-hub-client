@@ -64,7 +64,7 @@ const Navbar = () => {
         <div
           className={`hidden md:block ${
             open ? "top-0" : "top-10 mt-5 translate-x-0"
-          } lg:max-w-[1350px] mx-auto`}
+          } lg:max-w-[1350px] mx-auto sticky top-0`}
         >
           <div className="flex items-center justify-between">
             <div className="text-">
@@ -117,7 +117,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <header className="sticky top-0 z-50 flex items-center justify-between bg-[#00131E] mt-2 px-3 md:px-0">
+        <nav className="sticky z-50 flex items-center justify-between bg-[#00131E] mt-2 px-3 md:px-0">
           <div onClick={() => setIsOpen(!isOpen)}>
             <RxHamburgerMenu className="text-white text-3xl block md:hidden"></RxHamburgerMenu>
           </div>
@@ -227,7 +227,7 @@ const Navbar = () => {
               </button>
             </form>
           </div>
-        </header>
+        </nav>
         <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
           <MobileMenu />
           <MobileMenu />
