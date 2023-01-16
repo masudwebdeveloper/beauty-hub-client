@@ -1,12 +1,12 @@
-import './App.css';
-import { RouterProvider } from 'react-router-dom';
-import router from './Routes/Route';
-import ScrollToTop from 'react-scroll-to-top';
-import { Toaster } from 'react-hot-toast';
+import "./App.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./Routes/Route";
+import ScrollToTop from "react-scroll-to-top";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className='bg-[#F2F3F8]'>
+    <div className="bg-[#F2F3F8]">
       <RouterProvider router={router}></RouterProvider>
       <ScrollToTop
         width="28"

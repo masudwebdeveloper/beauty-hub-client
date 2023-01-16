@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/VYjQfsV/category1.webp",
+        "name": "WHITING & BREATHING",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/9r3SJJD/category2.webp",
+        "name": "OILY & ACNE SKIN CARE",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/QMJM9g6/category3.webp",
+        "name": "EXCLUSIVE SKIN CARE",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/VYjQfsV/category4.webp",
+        "name": "MOISTURIZED",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/GQxKGFb/category5.webp",
+        "name": "PREMIUM SKINCLINIC PRODUCTS",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/GQxKGFb/category5.webp",
+        "name": "DAILY SKIN CARE",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co/mDJ9NB4/category7.webp",
+        "name": "MATURE SKIN CARE",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/7XWXhC6/category8.webp",
+        "name": "HYPERPIGMATION, SPOT & SCAR",
+        "price": "100",
+        "rating": 5
+    }
+]

@@ -1,0 +1,15 @@
+.swiper{
+    padding: 40px 0 !important;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    top: 25px !important;
+    z-index: 20 !important;
+    background-color: rgb(208, 205, 205);
+    padding: 17px 32px !important;
+    
+  }
+  .swiper-button-prev{
+    right: 100px !important;
+    left: auto !important;
+    background-image: url('../assets/images/left-arrow.png');
+  }
