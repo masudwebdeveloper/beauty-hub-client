@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { A11y, Controller, Navigation, Pagination } from "swiper";
+import { A11y, Navigation, Pagination } from "swiper";
 import { SwiperSlide, Swiper } from "swiper/react";
 import '../../Styles/FeatureProducts.module.css';
 // Import Swiper styles
