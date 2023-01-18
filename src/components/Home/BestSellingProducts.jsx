@@ -10,9 +10,11 @@ import Carousel from "react-grid-carousel";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import BestSellingProductLeft from "./BestSellingProductLeft";
+import BestSellingProductRight from "./BestSellingProductRight";
 // import "./NewArrival.css";
 
-const NewArrival = () => {
+const BestSellingProducts = () => {
   const [newArrivalProducts, setNewArrivalProducts] = useState([]);
   useEffect(() => {
     fetch("newarrivalproducts.json")
@@ -32,10 +34,22 @@ const NewArrival = () => {
     },
   ];
   return (
-    <div className="w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center pb-10">
+    <div className="w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center py-10">
+      <div className="col-span-3">
+        <Carousel cols={3} rows={2} gap={10} loop autoplay={3000}>
+          {newArrivalProducts.map((product) => (
+            <Carousel.Item>
+              <BestSellingProductLeft
+                key={product.id}
+                product={product}
+              ></BestSellingProductLeft>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
       <div className="col-span-2">
-        <h1 className="text-center text-4xl font-semibold">New Arrival</h1>
-        <div className="pt-10">
+        <h1 className="text-center text-4xl font-semibold">Best Selling</h1>
+        <div className=" pt-10">
           <Swiper
             // install Swiper modules
             // navigation={true}
@@ -54,27 +68,15 @@ const NewArrival = () => {
             <div className="">
               {newProducts.map((product) => (
                 <SwiperSlide key={product.id}>
-                  <NewArrivalLeft product={product}></NewArrivalLeft>
+                  <BestSellingProductRight product={product}></BestSellingProductRight>
                 </SwiperSlide>
               ))}
             </div>
           </Swiper>
         </div>
       </div>
-      <div className="col-span-3">
-        <Carousel cols={3} rows={2} gap={10} loop autoplay={3000}>
-          {newArrivalProducts.map((product) => (
-            <Carousel.Item>
-              <NewArrivalRight
-                key={product.id}
-                product={product}
-              ></NewArrivalRight>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </div>
     </div>
   );
 };
 
-export default NewArrival;
+export default BestSellingProducts;

@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineHeart } from "react-icons/ai";
 
-const NewArrivalRight = ({ product }) => {
+const BestSellingProductLeft = ({ product }) => {
   const { imgFront,imgBack, name, rating, price } = product;
   return (
     <div className="group cursor-pointer rounded-md overflow-hidden">
@@ -42,4 +42,4 @@ const NewArrivalRight = ({ product }) => {
   );
 };
 
-export default NewArrivalRight;
+export default BestSellingProductLeft;

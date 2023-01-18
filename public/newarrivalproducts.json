@@ -2,7 +2,7 @@
     {
         "id": 1,
         "imgFront": "https://i.ibb.co/zGy6F2z/product-f-1.jpg",
-        "imgBack": "https://i.ibb.co/zGy6F2z/product-f-1.jpg",
+        "imgBack": "https://i.ibb.co/Jzw5ZY1/product-b-1.jpg",
         "name": "WHITING & BREATHING",
         "price": "100",
         "rating": 5
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "imgFront": "https://i.ibb.co/S54qSNs/product-f-2.jpg",
-        "imgBack": "https://i.ibb.co/S54qSNs/product-f-2.jpg",
+        "imgBack": "https://i.ibb.co/XyJ78SH/product-b-2.jpg",
         "name": "OILY & ACNE SKIN CARE",
         "price": "100",
         "rating": 5
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "imgFront": "https://i.ibb.co/8B3zMjx/product-f-3.jpg",
-        "imgBack": "https://i.ibb.co/S54qSNs/product-f-2.jpg",
+        "imgBack": "https://i.ibb.co/1KMjtZC/product-b-3.jpg",
         "name": "EXCLUSIVE SKIN CARE",
         "price": "100",
         "rating": 5
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "imgFront": "https://i.ibb.co/bWNGQdK/product-f-4.jpg",
-        "imgBack": "https://i.ibb.co/S54qSNs/product-f-2.jpg",
+        "imgBack": "https://i.ibb.co/nm6NYX9/product-b-4.jpg",
         "name": "MOISTURIZED",
         "price": "100",
         "rating": 5
@@ -34,7 +34,7 @@
     {
         "id": 5,
         "imgFront": "https://i.ibb.co/JHGvzXb/product-f-5.jpg",
-        "imgBack": "https://i.ibb.co/S54qSNs/product-f-2.jpg",
+        "imgBack": "https://i.ibb.co/r29zGwG/product-b-5.jpg",
         "name": "PREMIUM SKINCLINIC PRODUCTS",
         "price": "100",
         "rating": 5
@@ -42,23 +42,55 @@
     {
         "id": 6,
         "imgFront": "https://i.ibb.co/8zg1vfv/product-f-6.jpg",
-        "imgBack": "https://i.ibb.co/S54qSNs/product-f-2.jpg",
+        "imgBack": "https://i.ibb.co/cNVwmRf/product-b-6.jpg",
         "name": "DAILY SKIN CARE",
         "price": "100",
         "rating": 5
     },
     {
         "id": 7,
-        "imgFront": "https://i.ibb.co/qYpWW7H/product-f-9.jpg",
-        "imgBack": "https://i.ibb.co/S54qSNs/product-f-2.jpg",
-        "name": "MATURE SKIN CARE",
+        "imgFront": "https://i.ibb.co/WzHg278/product-f-7.jpg",
+        "imgBack": "https://i.ibb.co/NsMnJ8N/product-b-7.jpg",
+        "name": "DAILY SKIN CARE",
         "price": "100",
         "rating": 5
     },
     {
         "id": 8,
+        "imgFront": "https://i.ibb.co/ZNRCsVR/product-f-8.jpg",
+        "imgBack": "https://i.ibb.co/T08sTKT/product-b-8.jpg",
+        "name": "DAILY SKIN CARE",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 9,
+        "imgFront": "https://i.ibb.co/qYpWW7H/product-f-9.jpg",
+        "imgBack": "https://i.ibb.co/MMRqvrh/product-b-9.jpg",
+        "name": "MATURE SKIN CARE",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 10,
         "imgFront": "https://i.ibb.co/9NFtB1s/product-f-10.jpg",
-        "imgBack": "https://i.ibb.co/S54qSNs/product-f-2.jpg",
+        "imgBack": "https://i.ibb.co/QcD5kFZ/product-b-10.jpg",
+        "name": "HYPERPIGMATION, SPOT & SCAR",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 11,
+        "imgFront": "https://i.ibb.co/ydHTKbB/product-f-11.jpg",
+        "imgBack": "https://i.ibb.co/HTWY12T/product-b-11.jpg",
+        "name": "HYPERPIGMATION, SPOT & SCAR",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 12,
+        "imgFront": "https://i.ibb.co/ZNRCsVR/product-f-8.jpg",
+        "imgBack": "https://i.ibb.co/T08sTKT/product-b-8.jpg",
         "name": "HYPERPIGMATION, SPOT & SCAR",
         "price": "100",
         "rating": 5

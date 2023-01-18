@@ -6,7 +6,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 const NewArrivalLeft = ({product}) => {
     const { img, name, rating, price } = product;
     return (
-        <div className="group cursor-pointer rounded-md overflow-hidden">
+        <div className="group cursor-pointer rounded-sm overflow-hidden">
       <div>
         <img src={img} alt="" />
       </div>
