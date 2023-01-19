@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/C9f1gJP/treatment-photo-1.webp",
+        "name": "Doctor Consultation",
+        "title": "Consulting our doctors regularly, getting the correct treatment quickly, avoiding any complications.",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/4Yv1hJs/treatment-photo-2.jpg",
+        "name": "Doctor Consultation",
+        "title": "Consulting our doctors regularly, getting the correct treatment quickly, avoiding any complications.",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/PCDD3Hp/treatment-photo-3.jpg",
+        "name": "Doctor Consultation",
+        "title": "Consulting our doctors regularly, getting the correct treatment quickly, avoiding any complications.",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/F5fXsfj/treatment-photo-4.jpg",
+        "name": "Doctor Consultation",
+        "title": "Consulting our doctors regularly, getting the correct treatment quickly, avoiding any complications.",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/QfvG933/treatment-photo-5.jpg",
+        "name": "Doctor Consultation",
+        "title": "Consulting our doctors regularly, getting the correct treatment quickly, avoiding any complications.",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/3hjLGdf/treatment-photo-6.jpg",
+        "name": "Doctor Consultation",
+        "title": "Consulting our doctors regularly, getting the correct treatment quickly, avoiding any complications.",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co/Jt7VXBP/treatment-photo-7.jpg",
+        "name": "Doctor Consultation",
+        "title": "Consulting our doctors regularly, getting the correct treatment quickly, avoiding any complications.",
+        "price": "100",
+        "rating": 5
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/j3N3mb1/treatment-photo-8.jpg",
+        "name": "Doctor Consultation",
+        "title": "Consulting our doctors regularly, getting the correct treatment quickly, avoiding any complications.",
+        "price": "100",
+        "rating": 5
+    }
+]

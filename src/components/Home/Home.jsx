@@ -5,6 +5,7 @@ import BestSellingProducts from "./BestSellingProducts";
 import Categories from "./Categories";
 import FeatureProducts from "./FeatureProducts";
 import NewArrival from "./NewArrival";
+import Treatments from "./Treatments";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <NewArrival></NewArrival>
       <DermoBanner></DermoBanner>
       <BestSellingProducts></BestSellingProducts>
+      <Treatments></Treatments>
     </main>
   );
 };
