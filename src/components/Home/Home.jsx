@@ -3,8 +3,10 @@ import Banner from "./Banner/Banner";
 import DermoBanner from "./Banner/DermoBanner";
 import BestSellingProducts from "./BestSellingProducts";
 import Categories from "./Categories";
+import DemoGrid from "./DemoGrid";
 import FeatureProducts from "./FeatureProducts";
 import NewArrival from "./NewArrival";
+import Testimonal from "./Testimonal/Testimonal";
 import Treatments from "./Treatments";
 
 const Home = () => {
@@ -17,6 +19,8 @@ const Home = () => {
       <DermoBanner></DermoBanner>
       <BestSellingProducts></BestSellingProducts>
       <Treatments></Treatments>
+      {/* <DemoGrid></DemoGrid> */}
+      <Testimonal></Testimonal>
     </main>
   );
 };
