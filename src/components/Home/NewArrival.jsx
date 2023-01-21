@@ -32,7 +32,7 @@ const NewArrival = () => {
     },
   ];
   return (
-    <div className="w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center pb-10">
+    <div className="lg:max-w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center pb-10">
       <div className="col-span-2">
         <h1 className="text-center text-4xl font-semibold">New Arrival</h1>
         <div className="pt-10">

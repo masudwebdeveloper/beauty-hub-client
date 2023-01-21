@@ -40,7 +40,7 @@ const Testimonal = () => {
   return (
     <div className="lg:max-w-[1350px] mx-auto">
       <div>
-        <h4 className="text-xl font-light text-center">Our Testimonal</h4>
+        <h4 className="text-xl font-light text-center">Our Testimonial</h4>
         <h2 className="text-5xl font-bold text-center">
           What's Our Customar say
         </h2>
@@ -49,8 +49,22 @@ const Testimonal = () => {
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={3}
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }}
         //   navigation={true}
           loop={true}
           autoplay={{

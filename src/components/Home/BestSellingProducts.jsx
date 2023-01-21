@@ -34,7 +34,7 @@ const BestSellingProducts = () => {
     },
   ];
   return (
-    <div className="w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center py-10">
+    <div className="lg:max-w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center py-10">
       <div className="col-span-3">
         <Carousel cols={3} rows={2} gap={10} loop autoplay={3000}>
           {newArrivalProducts.map((product) => (

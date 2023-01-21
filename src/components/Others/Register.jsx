@@ -10,7 +10,7 @@ const Register = () => {
   };
   return (
     <div className="">
-      <div className="max-w-[1350px] mx-auto py-5">
+      <div className="lg:max-w-[1350px] mx-auto py-5">
         <div className="md:w-1/4 rounded-sm mx-auto text-center bg-white shadow-2xl py-5">
           <h2 className="text-gray-700 font-bold text-xl">Create an Account</h2>
           <form action="">

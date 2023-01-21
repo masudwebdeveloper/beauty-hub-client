@@ -28,7 +28,21 @@ const FeatureProducts = () => {
           navigation={true}
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={10}
-          slidesPerView={5}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }}
           loop={true}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
