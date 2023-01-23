@@ -80,9 +80,9 @@ const Testimonal = () => {
             {testimonalData.map((testimonal) => (
               <SwiperSlide className="my-10">
                 <div key={testimonal.id} className="">
-                  <div className="group border-2 border-animated-spin border-dashed border-gray-500 w-20 h-20 overflow-hidden mx-auto rounded-full">
+                  <div className="group border-2 border-animated-spin border-gray-500 w-20 h-20 overflow-hidden mx-auto rounded-full">
                     <img
-                      className="group-hover:scale-75 duration-500 bg-origin-content w-full h-full rounded-full"
+                      className="group-hover:scale-95 duration-500 bg-origin-content w-full h-full rounded-full"
                       src={testimonal.profile}
                       alt={testimonal.name}
                     />
