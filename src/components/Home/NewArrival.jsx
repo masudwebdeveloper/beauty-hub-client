@@ -10,15 +10,24 @@ import Carousel from "react-grid-carousel";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import { useQuery } from "@tanstack/react-query";
 // import "./NewArrival.css";
 
 const NewArrival = () => {
-  const [newArrivalProducts, setNewArrivalProducts] = useState([]);
-  useEffect(() => {
-    fetch("newarrivalproducts.json")
-      .then((res) => res.json())
-      .then((data) => setNewArrivalProducts(data));
-  }, []);
+  // const [newArrivalProducts, setNewArrivalProducts] = useState([]);
+  // useEffect(() => {
+  //   fetch("newarrivalproducts.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setNewArrivalProducts(data));
+  // }, []);
+  const {data: newArrivalProducts = [], refetch} = useQuery({
+    queryKey: ['subcategory'],
+    queryFn: async () =>{
+      const res = await fetch('http://localhost:5000/new-arrival-products/new-arrival')
+      const data = await res.json();
+      return data;
+    }
+  })
   const newProducts = [
     {
       id: 1,

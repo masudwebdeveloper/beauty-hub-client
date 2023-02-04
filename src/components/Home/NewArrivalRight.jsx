@@ -4,16 +4,16 @@ import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineHeart } from "react-icons/ai";
 
 const NewArrivalRight = ({ product }) => {
-  const { imgFront,imgBack, name, rating, price } = product;
+  const { image, name, rating, price } = product;
   return (
-    <div className="group cursor-pointer rounded-md overflow-hidden">
+    <div className="group cursor-pointer rounded-md overflow-hidden border shadow">
       <div>
-        <img className="opacity-100 block group-hover:hidden group-hover:opacity-0" src={imgFront} alt="" />
-        <img className="opacity-0 hidden group-hover:block group-hover:opacity-100" src={imgBack} alt="" />
+        <img className="opacity-100 block group-hover:hidden group-hover:opacity-0 h-60 w-full" src={image} alt="" />
+        <img className="opacity-0 hidden group-hover:block group-hover:opacity-100 h-60 w-full" src={image} alt="" />
       </div>
       <div className="p-2 px-4 bg-white shadow-md">
         <div className="flex gap-x-1">
-          {[...Array(rating).keys()].map((i) => (
+          {[...Array(5).keys()].map((i) => (
             <div key={i}>
               <small>
                 <FaStar></FaStar>

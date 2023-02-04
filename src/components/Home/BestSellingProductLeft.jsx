@@ -2,18 +2,19 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineHeart } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const BestSellingProductLeft = ({ product }) => {
-  const { imgFront,imgBack, name, rating, price } = product;
+  const {_id, image,name, rating, price } = product;
   return (
     <div className="group cursor-pointer rounded-md overflow-hidden">
-      <div>
-        <img className="opacity-100 block group-hover:hidden group-hover:opacity-0" src={imgFront} alt="" />
-        <img className="opacity-0 hidden group-hover:block group-hover:opacity-100" src={imgBack} alt="" />
-      </div>
+      <Link to={`/product-details/${_id}`}>
+        <img className="w-full h-80" src={image} alt="" />
+        {/* <img className="opacity-0 hidden group-hover:block group-hover:opacity-100" src={image} alt="" /> */}
+      </Link>
       <div className="p-2 px-4 bg-white shadow-md">
         <div className="flex gap-x-1">
-          {[...Array(rating).keys()].map((i) => (
+          {[...Array(5).keys()].map((i) => (
             <div key={i}>
               <small>
                 <FaStar></FaStar>
@@ -21,9 +22,9 @@ const BestSellingProductLeft = ({ product }) => {
             </div>
           ))}
         </div>
-        <p className="mb-5">
+        <Link to={`/product-details/${_id}`} className="mb-5">
           <small>{name}</small>
-        </p>
+        </Link>
         <p className=" text-pink-500 font-bold">৳{price}</p>
         <button className="px-10 py-2 hover:bg-gray-500 hover:text-white bg-pink-400 mx-auto w-full transition-all rounded-sm duration-300">
           <GiShoppingCart className="inline mr-2"></GiShoppingCart>

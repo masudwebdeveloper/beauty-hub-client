@@ -20,7 +20,6 @@ const Home = () => {
       <DermoBanner></DermoBanner>
       <BestSellingProducts></BestSellingProducts>
       <Treatments></Treatments>
-      {/* <DemoGrid></DemoGrid> */}
       <Testimonal></Testimonal>
       <GiftExplore></GiftExplore>
     </main>

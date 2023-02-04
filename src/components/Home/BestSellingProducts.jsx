@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { A11y, Autoplay, Grid, Pagination } from "swiper";
 
 import { SwiperSlide, Swiper } from "swiper/react";
-import NewArrivalLeft from "./NewArrivalLeft";
-import NewArrivalRight from "./NewArrivalRight";
 import Carousel from "react-grid-carousel";
 
 // Import Swiper styles
@@ -12,15 +10,17 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import BestSellingProductLeft from "./BestSellingProductLeft";
 import BestSellingProductRight from "./BestSellingProductRight";
-// import "./NewArrival.css";
+import { useQuery } from "@tanstack/react-query";
 
 const BestSellingProducts = () => {
-  const [newArrivalProducts, setNewArrivalProducts] = useState([]);
-  useEffect(() => {
-    fetch("newarrivalproducts.json")
-      .then((res) => res.json())
-      .then((data) => setNewArrivalProducts(data));
-  }, []);
+  const {data: subcategoryProducts = [], refetch} = useQuery({
+    queryKey: ['subcategory'],
+    queryFn: async () =>{
+      const res = await fetch('http://localhost:5000/best-selling-products/best-selling')
+      const data = await res.json();
+      return data;
+    }
+  })
   const newProducts = [
     {
       id: 1,
@@ -33,11 +33,12 @@ const BestSellingProducts = () => {
       name: "Novaclear Expert Protechting Cream spf 50+",
     },
   ];
+
   return (
     <div className="lg:max-w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center py-10">
       <div className="col-span-3">
         <Carousel cols={3} rows={2} gap={10} loop autoplay={3000}>
-          {newArrivalProducts.map((product) => (
+          {subcategoryProducts.map((product) => (
             <Carousel.Item>
               <BestSellingProductLeft
                 key={product.id}
@@ -51,8 +52,6 @@ const BestSellingProducts = () => {
         <h1 className="text-center text-4xl font-semibold">Best Selling</h1>
         <div className=" pt-10">
           <Swiper
-            // install Swiper modules
-            // navigation={true}
             modules={[Pagination, A11y, Autoplay, Grid]}
             spaceBetween={10}
             slidesPerView={1}

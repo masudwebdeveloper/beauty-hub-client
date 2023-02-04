@@ -8,9 +8,7 @@ const Main = () => {
     <section>
       <Navbar></Navbar>
       <Outlet></Outlet>
-      <div className="">
-        <Footer></Footer>
-      </div>
+      <Footer></Footer>
     </section>
   );
 };
