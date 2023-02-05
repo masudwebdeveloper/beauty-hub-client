@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const BestSellingProductLeft = ({ product }) => {
   const {_id, image,name, rating, price } = product;
+  console.log(_id);
   return (
     <div className="group cursor-pointer rounded-md overflow-hidden">
       <Link to={`/product-details/${_id}`}>
