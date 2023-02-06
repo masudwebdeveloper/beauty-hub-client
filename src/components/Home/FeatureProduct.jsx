@@ -2,16 +2,17 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineHeart } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const FeatureProduct = ({ product }) => {
-  const { img, name, rating, price } = product;
+  const { _id, image, name, rating, price } = product;
   return (
     <div className="group cursor-pointer py-5 rounded-md overflow-hidden">
-      <div>
-        <img src={img} alt="" />
-      </div>
+      <Link to={`/products-details/${_id}`} className="h-60 block">
+        <img className="h-full w-full" src={image} alt="" />
+      </Link>
       <div className="p-2 px-4 bg-white shadow-md">
         <div className="flex gap-x-1">
-          {[...Array(rating).keys()].map((i) => (
+          {[...Array(5).keys()].map((i) => (
             <div key={i}>
               <small>
                 <FaStar></FaStar>
@@ -19,9 +20,9 @@ const FeatureProduct = ({ product }) => {
             </div>
           ))}
         </div>
-        <p className="mb-5">
+        <Link to={`/products-details/${_id}`} className="mb-5">
           <small>{name}</small>
-        </p>
+        </Link>
         <p className=" text-pink-500 font-bold">৳{price}</p>
         <button className="px-10 py-2 hover:bg-gray-500 hover:text-white bg-pink-400 mx-auto w-full transition-all rounded-sm duration-300">
           <GiShoppingCart className="inline mr-2"></GiShoppingCart>

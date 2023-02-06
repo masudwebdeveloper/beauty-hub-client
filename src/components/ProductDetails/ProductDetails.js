@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { FaCartArrowDown, FaRegHeart, FaStar } from "react-icons/fa";
 import { MdShare } from "react-icons/md";
 import { BsCheck2Circle } from "react-icons/bs";
-import { FiMinus, FiPlus } from "react-icons/fi";
+import { FiMinus, FiPhoneCall, FiPlus } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
-import { NavLink, useLoaderData } from "react-router-dom";
+import {TfiHeadphoneAlt} from 'react-icons/tfi';
+import { NavLink, Outlet, useLoaderData } from "react-router-dom";
 import Button from "../Button/Button";
+import TopSellingProducts from "../TopSellingProducts/TopSellingProducts";
 
 const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
@@ -22,6 +24,13 @@ const ProductDetails = () => {
       <FaCartArrowDown />
     </>
   );
+
+  const call = (
+    <FiPhoneCall/>
+  )
+  const headPhone = (
+    <TfiHeadphoneAlt/>
+  )
   return (
     <div className="lg:max-w-[1350px] mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-10 p-3 gap-4 shadow bg-white">
@@ -157,11 +166,37 @@ const ProductDetails = () => {
       </div>
       {/* this is product section below part*/}
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-3 mt-5">
-        <div>
-            <NavLink></NavLink>
-            <NavLink></NavLink>
+        <div className="col-span-8 bg-white shadow px-4 py-6">
+          <NavLink
+            to="/benefitFeatures"
+            className="mr-5 hover:border-b-2 pb-2 hover:border-yellow-400"
+          >
+            Benefits & Features
+          </NavLink>
+          <NavLink className="mr-5 hover:border-b-2 pb-2 hover:border-yellow-400">
+            How to use
+          </NavLink>
+          <div>
+            <Outlet></Outlet>
+          </div>
         </div>
-
+        <div className="col-span-2">
+          <div className="bg-white p-2 shadow">
+            <p className="border-b-2 text-gray-500">
+              <small>Contact us</small>
+            </p>
+            <div className="flex gap-x-4 mt-5 mb-2">
+              <Button name={"callme"} icon={call}></Button>
+              <Button name={"ask"} icon={headPhone}></Button>
+            </div>
+          </div>
+          <div className="bg-white shadow p-2 mt-3">
+                <h1 className="border-b-2 pb-2">Top Selling Products</h1>
+                <div>
+                  <TopSellingProducts/>
+                </div>
+          </div>
+        </div>
       </div>
     </div>
   );

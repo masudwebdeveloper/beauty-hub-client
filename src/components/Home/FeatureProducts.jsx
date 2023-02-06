@@ -12,7 +12,7 @@ import FeatureProduct from "./FeatureProduct";
 const FeatureProducts = () => {
   const [featureProducts, setFeatureProducts] = useState([]);
   useEffect(() => {
-    fetch("featureProducts.json")
+    fetch(`http://localhost:5000/products/featured-product`)
       .then((res) => res.json())
       .then((data) => setFeatureProducts(data));
   }, []);

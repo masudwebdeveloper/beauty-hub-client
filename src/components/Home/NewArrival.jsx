@@ -23,7 +23,7 @@ const NewArrival = () => {
   const {data: newArrivalProducts = [], refetch} = useQuery({
     queryKey: ['subcategory'],
     queryFn: async () =>{
-      const res = await fetch('http://localhost:5000/new-arrival-products/new-arrival')
+      const res = await fetch('http://localhost:5000/products/new-arrival')
       const data = await res.json();
       return data;
     }

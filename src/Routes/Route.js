@@ -1,3 +1,4 @@
+import BenefitAndFeature from "../components/BenefitAndFeature/BenefitAndFeature";
 import Home from "../components/Home/Home";
 import Login from "../components/Others/Login";
 import Register from "../components/Others/Register";
@@ -18,7 +19,13 @@ const router = createBrowserRouter([
       {
         path: '/products-details/:id',
         element: <ProductDetails></ProductDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/product-details/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/product-details/${params.id}`),
+        // children: [
+        //   {
+        //     path: '/benefit',
+        //     element: <BenefitAndFeature></BenefitAndFeature>
+        //   }
+        // ]
       },
       {
         path: "/register",

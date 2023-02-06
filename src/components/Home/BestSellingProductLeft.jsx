@@ -9,7 +9,7 @@ const BestSellingProductLeft = ({ product }) => {
   console.log(_id);
   return (
     <div className="group cursor-pointer rounded-md overflow-hidden">
-      <Link to={`/product-details/${_id}`}>
+      <Link to={`/products-details/${_id}`}>
         <img className="w-full h-80" src={image} alt="" />
         {/* <img className="opacity-0 hidden group-hover:block group-hover:opacity-100" src={image} alt="" /> */}
       </Link>
@@ -23,7 +23,7 @@ const BestSellingProductLeft = ({ product }) => {
             </div>
           ))}
         </div>
-        <Link to={`/product-details/${_id}`} className="mb-5">
+        <Link to={`/products-details/${_id}`} className="mb-5">
           <small>{name}</small>
         </Link>
         <p className=" text-pink-500 font-bold">৳{price}</p>

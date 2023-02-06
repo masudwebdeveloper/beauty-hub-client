@@ -16,7 +16,7 @@ const BestSellingProducts = () => {
   const {data: subcategoryProducts = [], refetch} = useQuery({
     queryKey: ['subcategory'],
     queryFn: async () =>{
-      const res = await fetch('http://localhost:5000/best-selling-products/best-selling')
+      const res = await fetch('http://localhost:5000/products/best-selling')
       const data = await res.json();
       return data;
     }
