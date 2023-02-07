@@ -1,12 +1,13 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const TopSellingProduct = ({ product, isLoading }) => {
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
   return (
-    <div className="flex gap-4">
+    <Link to={`/`} className="flex gap-4">
       <div className="w-2/5">
         <img className="w-full" src={product.image} alt={product.name} />
       </div>
@@ -25,7 +26,7 @@ const TopSellingProduct = ({ product, isLoading }) => {
         </div>
         <p className="text-pink-500">৳{product?.price}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

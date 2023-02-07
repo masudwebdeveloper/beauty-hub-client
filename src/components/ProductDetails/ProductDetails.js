@@ -4,15 +4,20 @@ import { MdShare } from "react-icons/md";
 import { BsCheck2Circle } from "react-icons/bs";
 import { FiMinus, FiPhoneCall, FiPlus } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
-import {TfiHeadphoneAlt} from 'react-icons/tfi';
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { NavLink, Outlet, useLoaderData } from "react-router-dom";
 import Button from "../Button/Button";
 import TopSellingProducts from "../TopSellingProducts/TopSellingProducts";
+import BenefitAndFeature from "../BenefitAndFeature/BenefitAndFeature";
+import HowToUse from "../HowToUse/HowToUse";
+import LoginModal from "../LoginModal/LoginModal";
 
 const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
+  const [toggle, setToggle] = useState(1);
+  const [openModal, setOpenModal] = useState(false)
   const product = useLoaderData();
-  const { image, name, description, ingradients, volume, price } = product;
+  const { _id, image, name, description, ingradients, volume, price } = product;
   console.log(product);
   const shopingBag = (
     <>
@@ -25,12 +30,8 @@ const ProductDetails = () => {
     </>
   );
 
-  const call = (
-    <FiPhoneCall/>
-  )
-  const headPhone = (
-    <TfiHeadphoneAlt/>
-  )
+  const call = <FiPhoneCall />;
+  const headPhone = <TfiHeadphoneAlt />;
   return (
     <div className="lg:max-w-[1350px] mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-10 p-3 gap-4 shadow bg-white">
@@ -166,18 +167,38 @@ const ProductDetails = () => {
       </div>
       {/* this is product section below part*/}
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-3 mt-5">
-        <div className="col-span-8 bg-white shadow px-4 py-6">
-          <NavLink
-            to="/benefitFeatures"
-            className="mr-5 hover:border-b-2 pb-2 hover:border-yellow-400"
-          >
-            Benefits & Features
-          </NavLink>
-          <NavLink className="mr-5 hover:border-b-2 pb-2 hover:border-yellow-400">
-            How to use
-          </NavLink>
-          <div>
-            <Outlet></Outlet>
+        <div className="col-span-8">
+          <div className="bg-white px-4 py-6 shadow-sm">
+            <div className="border-b-2 pb-2">
+              <NavLink
+                onClick={() => setToggle(1)}
+                className="mr-5 hover:border-b-2 pb-2 hover:border-yellow-400"
+              >
+                Benefits & Features
+              </NavLink>
+              <NavLink
+                onClick={() => setToggle(2)}
+                className="mr-5 hover:border-b-2 pb-2 hover:border-yellow-400"
+              >
+                How to use
+              </NavLink>
+            </div>
+            <div className="bg-white mt-5">
+              <div className={`${toggle === 1 ? "block" : "hidden"}`}>
+                <BenefitAndFeature></BenefitAndFeature>
+              </div>
+              <div className={`${toggle === 2 ? "block" : "hidden"}`}>
+                <HowToUse></HowToUse>
+              </div>
+            </div>
+          </div>
+          <div className="px-4 py-6 mt-4 bg-white">
+            <div className="border-b-2 pb-3 mb-10">
+              <h3 className="text-2xl font-medium">Questions about this product</h3>
+              <p>Login to ask questions</p>
+            </div>
+              <p className="text-gray-400 text-center mb-3">There have been no question for this product yet.</p>
+              <label onClick={()=> setOpenModal(true)} htmlFor="login-modal" className="bg-pink-500 px-4 py-2 hover:bg-pink-600 rounded-sm text-white cursor-pointer">Ask a Question</label>
           </div>
         </div>
         <div className="col-span-2">
@@ -191,13 +212,16 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className="bg-white shadow p-2 mt-3">
-                <h1 className="border-b-2 pb-2">Top Selling Products</h1>
-                <div>
-                  <TopSellingProducts/>
-                </div>
+            <h1 className="border-b-2 pb-2">Top Selling Products</h1>
+            <div>
+              <TopSellingProducts />
+            </div>
           </div>
         </div>
       </div>
+      { openModal && 
+        <LoginModal setOpenModal={setOpenModal}></LoginModal>
+      }
     </div>
   );
 };

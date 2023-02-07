@@ -1,28 +1,29 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/logo-one.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import { TbPhone } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { GrFormLocation } from "react-icons/gr";
 import { VscClose } from "react-icons/vsc";
+import { GoEyeClosed } from "react-icons/go";
+import { CiSearch } from "react-icons/ci";
+import { RxHamburgerMenu } from "react-icons/rx";
 import user from "../../assets/images/user.png";
 import category from "../../assets/images/category.png";
 import register from "../../assets/images/register.png";
 import order from "../../assets/images/order.png";
-import { GoEyeClosed } from "react-icons/go";
-import { CiSearch } from "react-icons/ci";
-import { RxHamburgerMenu } from "react-icons/rx";
+import logo from "../../assets/images/logo-one.jpg";
+import DropdownItem from "../share/DropdownItem";
+import SkinCareDropdrownItem from "./SkinCareDropdrownItem";
+import TreatmentDropdownItem from "./TreatmentDropdownItem";
 
 import {
   MagnifyingGlassIcon,
   ShoppingBagIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
-import DropdownItem from "../share/DropdownItem";
-import "./Navbar.modules.css";
-import SkinCareDropdrownItem from "./SkinCareDropdrownItem";
-import TreatmentDropdownItem from "./TreatmentDropdownItem";
+
 import Drawer from "./Drawer";
+import "./Navbar.modules.css";
 import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
@@ -32,7 +33,7 @@ const Navbar = () => {
   const [openField, setOpenField] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <main>
+    <main className="">
       <section>
         <div className="hidden md:block">
           <div
